@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-KICK | ULTIMATE BRUTALISM</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">E-KICK // 2026</div>
+        <div class="nav-links" id="navLinks">
+            <a href="#drop">DROPS</a>
+            <a href="#cat">CATEGORÍAS</a>
+            <a href="#join">JOIN THE CLUB</a>
+            <a href="#help">HELP</a>
+        </div>
+        <button class="burger" id="burgerMenu" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <header class="hero">
+        <canvas id="canvas-hero"></canvas>
+        <div class="hero-text">
+            <h1>E-KICK</h1>
+            <p>ESTÉTICA BRUTALISTA / RENDIMIENTO PURO</p>
+        </div>
+    </header>
+
+    <div class="marquee">
+        <div class="marquee-inner">
+            <span>NEW DROP 04/05</span> <span>FAST DELIVERY</span> <span>HIGH QUALITY ACCS</span> <span>STREET CULTURE</span>
+            <span>NEW DROP 04/05</span> <span>FAST DELIVERY</span> <span>HIGH QUALITY ACCS</span> <span>STREET CULTURE</span>
+        </div>
+    </div>
+
+    <main>
+        <section id="cat" class="categories">
+            <article class="cat-box">
+                <h2>KICKS</h2>
+                <p>[ 42 ARTÍCULOS ]</p>
+                <a href="#" class="btn" style="margin-top: 20px;">EXPLORAR</a>
+            </article>
+            <article class="cat-box">
+                <h2>WEAR</h2>
+                <p>[ 18 ARTÍCULOS ]</p>
+                <a href="#" class="btn" style="margin-top: 20px;">EXPLORAR</a>
+            </article>
+        </section>
+
+        <section id="drop">
+            <header class="section-header">
+                <h2>ÚLTIMOS LANZAMIENTOS</h2>
+                <p>[ VER TODOS ]</p>
+            </header>
+
+            <div class="product-list">
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" alt="Kick Alpha V1">
+                    </div>
+                    <h3>E-KICK ALPHA V1</h3>
+                    <p>ZAPATILLA TÉCNICA - BLACK EDITION</p>
+                    <div class="price">$45.000</div>
+                    <button class="btn">ADD TO CART</button>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de" alt="Urban Phantom">
+                    </div>
+                    <h3>URBAN PHANTOM</h3>
+                    <p>MINIMALISMO Y CONFORT</p>
+                    <div class="price">$38.200</div>
+                    <button class="btn">ADD TO CART</button>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3" alt="Neon Tracker">
+                    </div>
+                    <h3>NEON TRACKER</h3>
+                    <p>REFLECTIVE MATERALS - NIGHT RUN</p>
+                    <div class="price">$52.000</div>
+                    <button class="btn">ADD TO CART</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="join" class="giveaway">
+            <h2>¿QUIERES UN PAR GRATIS?</h2>
+            <p>SÚMATE AL NEWSLETTER Y PARTICIPA POR EL SORTEO MENSUAL.</p>
+            <div class="input-group">
+                <input type="email" placeholder="TU@EMAIL.COM" required>
+                <button class="btn">UNIRME</button>
+            </div>
+        </section>
+
+        <section id="help">
+            <header class="section-header">
+                <h2>SOPORTE AL CLIENTE</h2>
+            </header>
+
+            <div class="faq-container">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <h3>¿CUÁNTO TARDA EL DELIVERY? <span>+</span></h3>
+                    <div class="faq-content">
+                        <p>En Córdoba Capital entregamos en 24hs. Resto del país de 3 a 5 días hábiles vía Andreani.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <h3>¿HAY CAMBIOS Y DEVOLUCIONES? <span>+</span></h3>
+                    <div class="faq-content">
+                        <p>Sí, tienes 30 días para realizar cambios si el producto conserva las etiquetas originales.</p>
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <h3>¿QUÉ MÉTODOS DE PAGO ACEPTAN? <span>+</span></h3>
+                    <div class="faq-content">
+                        <p>Transferencia bancaria, Mercado Pago (3 cuotas sin interés) y Criptomonedas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <h2 class="logo">E-KICK</h2>
+            <p>ESTABLECIDO EN 2026. LIDERANDO LA CULTURA URBANA DESDE CÓRDOBA, ARGENTINA.</p>
+        </section>
+        <section>
+            <h3>SOCIAL</h3>
+            <p>INSTAGRAM</p>
+            <p>TIKTOK</p>
+            <p>BEHANCE</p>
+        </section>
+        <section>
+            <h3>LEGAL</h3>
+            <p>TÉRMINOS</p>
+            <p>PRIVACIDAD</p>
+        </section>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/functions.js"></script>
+</body>
+</html>
